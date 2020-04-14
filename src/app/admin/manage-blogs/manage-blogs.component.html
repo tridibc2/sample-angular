@@ -1,0 +1,33 @@
+<div class="dash-header">
+    <div class="dash-title">
+        <h1>{{title}}</h1>
+    </div>
+    <div class="row">
+    <div class="dash-nav">
+        <a [routerLink]="['create']" class="btn btn-success">Add Post</a>
+    </div>
+    <div class="dash-nav">
+        <a [routerLink]="['create/category']" class="btn btn-success">Add Category</a>
+    </div>
+</div>
+  </div>
+  <table class="table table-bordered table-striped" *ngIf="allBlogs.length>0">
+    <tr>
+        <th>#ID</th>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let blog of allBlogs">
+        <td>{{blog.blogId}}</td>
+        <td><img src="" alt="blog image"></td>
+        <td>{{blog.title}}</td>
+        <td>{{blog.description.substr(0,100)}}</td>
+        <td class="action">
+            <a [routerLink]="['edit', blog.blogId]" class="btn btn-info btn-sm">Edit</a>
+            <a (click)="deleteThisBlog(blog.blogId)" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+    </tr>
+  </table>
+  {{error}}

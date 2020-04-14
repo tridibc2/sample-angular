@@ -1,0 +1,26 @@
+<div class="container" style="text-align:center">
+    <div class="row" style="text-align:center">
+      <div class="col-md-12" style="font-size:22px">All Blogs </div>
+      <br><br><br><br>
+    </div>
+    <br>
+    <br>
+    <section class="featured-blog mtb-40">
+      <div class="container">
+        <div class="row" style="text-align:center" *ngIf="allBlogs.length>0">
+          <div class="col-md-4" *ngFor="let blog of allBlogs">
+            <div class="card padding" style="width: 18rem;" [routerLink]="['/blog', blog.blogId]">
+              <a [routerLink]="['/blog', blog.id]"><img src="http://localhost:4000/{{blog.imagePath}}" class="card-img-top card-img-size" alt="blog1"></a>
+              <div class="card-body">
+                <h5 class="card-title">{{blog.title}}</h5>
+                <p class="card-text">{{blog.description}}</p>
+                <a [routerLink]="['/blog', blog.blogId]" class="btn btn-primary">Read More>>></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+  
+  </div>

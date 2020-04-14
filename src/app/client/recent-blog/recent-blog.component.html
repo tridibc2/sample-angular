@@ -1,0 +1,77 @@
+<!-- <div class="right-widget recent-post">
+    <h3>Recent Blogs</h3>
+    <div *ngFor="let blog of blogs">
+      <a [routerLink]="['/blog', blog.blogId]">
+          <div class="rb-box">
+              <div class="rb-box-img">
+                  <img src="http://localhost:4000/{{blog.imagePath}}" alt="{{blog.title}}"  height="50" width="50" />
+              </div>
+              <div class="rb-box-desc">
+                <h4>{{blog.title}}</h4>
+
+                 
+              </div>
+          </div>
+      </a>
+    </div>
+    <div class="service-error" *ngIf="error">
+      <h3>{{error.errorTitle}}</h3>
+      <p>{{error.errorDesc}}<p>
+    </div>
+  </div> -->
+
+<!--   <div class="container">
+    <div class="row">
+            <div class="col-md-12 card">
+                <article class="filter-group">
+                        <div class="card-body">
+                                <h6 class="title">recent</h6>
+                            <ul class="list-menu">
+                              <li *ngFor="let blog of blogs" [routerLink]="['/blog', blog.blogId]">{{blog.title}}</li>
+                          </ul>
+                        </div>
+                </article>
+            </div>
+    </div>
+</div> -->
+
+<!-- <div class="container">
+<div class="col-md-12 card">
+    <h6 class="title">Recent Blogs</h6>
+  <div class="row margin" *ngFor="let blog of blogs">
+    <div class="col-md-4 pl-0">
+      <a [routerLink]="['/blog', blog.blogId]">
+        <img src="http://localhost:4000/{{blog.imagePath}}" class="card-img-top card-img-size" alt="blog1">
+      </a>
+     </div>
+<div class="col-md-8 px-3">
+  <div class="card-block px-3">
+    <a [routerLink]="['/blog', blog.blogId]">
+    <h4 class="card-title">{{blog.title}}</h4>
+  </a>
+    <br>
+  </div>
+</div>
+</div>
+</div>
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h6 class="text-muted">Recent Blogs</h6> 
+      <ul class="list-group" *ngFor="let blog of blogs">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="image-parent">
+            <a [routerLink]="['/blog', blog.id]">
+              <img src="http://localhost/Angular7Blog/api/uploads/{{blog.image}}" class="img-fluid" alt="image">
+            </a>
+            </div>
+              <a [routerLink]="['/blog', blog.id]">
+                {{blog.title}}
+              </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

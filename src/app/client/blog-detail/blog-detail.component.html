@@ -1,0 +1,25 @@
+<div class="row" style="background-image: url('assets/images/himalayas.jpg');">
+  <div class="col-md-12 mx-auto" style="text-align:center; font-size:3rem; margin-top: 5%; margin-bottom: 5%;"><span style="color: #fff; font-weight: bolder;">All Blogs</span></div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col bottom">
+      <div class="col-md-12" *ngIf="currentBlog">
+        <h1>{{currentBlog.title}}</h1>
+        <hr>
+        <p><i class="nc-icon nc-time-alarm"></i> Posted on {{currentBlog.created_at | date:'medium'}} by <i class="nc-icon nc-spaceship"> {{currentBlog.author}}</i></p>
+        <p *ngIf="currentBlog.tags!=undefined && currentBlog.tags.length>0">tags : <span
+          *ngFor="let tag of currentBlog.tags;let first=first;let last=last">{{tag}}{{last ? '' : ', '}}</span></p>
+        <hr>
+         <div class="img-responsive"><img src="http://localhost/Angular7Blog/api/uploads/{{currentBlog.image}}" class="img-responsive"></div>
+         <hr>
+         <br>
+         <div [innerHtml]="currentBlog.description"></div>
+      </div>
+    </div>
+    <div class="col-12 col-md-3 order-2 order-md-2" style="margin-top: 1.1%;">
+      <app-recent-blog></app-recent-blog>
+      <app-blog-category></app-blog-category>
+  </div>
+  </div>
+  </div>

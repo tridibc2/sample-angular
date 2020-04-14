@@ -1,0 +1,44 @@
+.card-title {
+    font-size: small;
+}
+
+.margin {
+    margin-top: 2%;
+}
+
+.card-img-size {
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+     
+}
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 5;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-top:2%;
+} 
+
+
+.image-parent {
+    
+    width: 50px;
+  }
+
+.list-group-item {
+    margin-bottom: 2%;
+}

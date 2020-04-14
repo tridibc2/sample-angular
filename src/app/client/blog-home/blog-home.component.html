@@ -1,0 +1,61 @@
+<div class="wrapper">
+    <div class="page-header section-dark" style="background-image: url('assets/img/antoine-barres.jpg')">
+        <div class="filter"></div>
+        <div class="content-center">
+            <div class="container">
+                <div class="title-brand">
+                    <div class="angular-logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </div>
+                    <h1 class="presentation-title">Acesoftech Academy</h1>
+                    <div class="fog-low">
+                        <img src="assets/img/fog-low.png" alt="">
+                    </div>
+                    <div class="fog-low right">
+                        <img src="assets/img/fog-low.png" alt="">
+                    </div>
+                </div>
+
+                <h2 class="presentation-subtitle text-center">Mean Stack is the future of Web and Mobile technology.
+                    Mean stack is supported by Google and Microsoft.
+                    Get Industrial Mean Stack training here.</h2>
+            </div>
+        </div>
+        <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+        <h6 class=" category-absolute ml-auto mr-auto">Designed and coded by
+            <a href="https://www.linkedin.com/in/tridib-chatterjee-70a7a3112/" target="_blank"><span
+                    style="font-weight: bold;"> Tridib Chatterjee </span></a>
+        </h6>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-9 order-1 order-md-1">
+            <div class="row">
+                <div class="col-md-12 card" *ngFor="let blog of allBlogs">
+                    <div class="row">
+                        <div class="col-md-4 p-0">
+                            <a [routerLink]="['/blog', blog.id]">
+                                <img src="http://localhost/Angular7Blog/api/uploads/{{blog.image}}" class="card-img-top card-img-size"
+                                    alt="blog1">
+                            </a>
+                        </div>
+                        <div class="col-md-8 px-3">
+                            <div class="card-block px-3">
+                                <h4 class="card-title">{{blog.title}}</h4>
+                                <p class="card-text">{{blog.description}}</p>
+                                <br>
+                                <a [routerLink]="['/blog', blog.id]" class="mt-auto btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-3 order-2 order-md-2" style="margin-top: 1.1%;">
+            <app-recent-blog></app-recent-blog>
+            <app-blog-category></app-blog-category>
+        </div>
+    </div>
+</div>

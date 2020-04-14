@@ -1,0 +1,2 @@
+@angular/http@7.2.16: Package no longer supported. Use @angular/common instead
+popper.js@1.14.4: You can find the new Popper v2 at @popperjs/core

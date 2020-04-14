@@ -1,0 +1,47 @@
+  <div class="section landing-section" style="background-image: url('assets/images/webbnet_contact.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mr-auto ml-auto">
+          <h2 class="text-center"><span style="color: #fff">Keep in touch?</span></h2>
+          <form [formGroup]="contactForm" (ngSubmit)="contact()" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-md-6">
+                <label><span style="color: #fff">Name</span></label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
+                  </div>
+                  <input type="text" formControlName="formName" class="form-control" placeholder="Name" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label><span style="color: #fff">Email</span></label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="nc-icon nc-email-85"></i></span>
+                  </div>
+                  <input type="email" formControlName="formEmail" class="form-control" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label><span style="color: #fff">Phone</span></label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="nc-icon nc-mobile"></i></span>
+                  </div>
+                  <input type="number" formControlName="formPhone" class="form-control" placeholder="Phone" required>
+                </div>
+              </div>
+            </div>
+            <label><span style="color: #fff">Message</span></label>
+            <textarea class="form-control" formControlName="formMessage" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
+            <div class="row">
+              <div class="col-md-4 mr-auto ml-auto">
+                <button type="submit" class="btn btn-danger btn-lg btn-fill" [disabled]="!contactForm.valid" style="margin-top: 4%;">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
